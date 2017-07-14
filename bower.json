@@ -1,0 +1,22 @@
+{
+  "name": "hackathon-starter",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Konrad Gadzinowski <contact@konradg.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.7",
+    "bootstrap-social": "~5.0.0",
+    "font-awesome": "FortAwesome/Font-Awesome#~4.5"
+  }
+}
