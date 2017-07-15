@@ -337,10 +337,10 @@ Project Structure
 | Name                               | Description                                                  |
 | ---------------------------------- | ------------------------------------------------------------ |
 | **config**/passport.js             | Passport Local and OAuth strategies, plus login middleware.  |
-| **controllers**/api.js             | Controller for /api route and all api examples.              |
-| **controllers**/contact.js         | Controller for contact form.                                 |
+| **controllers**/ApiController.ts             | Controller for /api route and all api examples.              |
+| **controllers**/ContactController.ts         | Controller for contact form.                                 |
 | **controllers**/home.js            | Controller for home page (index).                            |
-| **controllers**/user.js            | Controller for user account management.                      |
+| **controllers**/UserController.ts            | Controller for user account management.                      |
 | **models**/User.js                 | Mongoose schema and model for User.                          |
 | **public**/                        | Static assets (fonts, css, js, img).                         |
 | **public**/**js**/application.js   | Specify client-side JavaScript dependencies.                 |
@@ -414,7 +414,7 @@ List of Packages
 | twilio                          | Twilio API library.                                                   |
 | twit                            | Twitter API library.                                                  |
 | lodash                          | Handy JavaScript utlities library.                                    |
-| validator                       | Used in conjunction with express-validator in **controllers/api.js**. |
+| validator                       | Used in conjunction with express-validator in **controllers/ApiController.ts**. |
 | mocha                           | Test framework.                                                       |
 | chai                            | BDD/TDD assertion library.                                            |
 | supertest                       | HTTP assertion library.                                               |
@@ -1512,7 +1512,7 @@ Changelog
 - Added Pinterest API example
 - Added timestamp support to the User schema
 - Fixed `next` parameter being *undefined* inside `getReset` handler
-- Refactored querysting param usage in *api.js* controller
+- Refactored querysting param usage in *ApiController.ts* controller
 - Removed *setup.js* (generator) due to its limited functionality and a lack of updates
 
 ### 3.4.1 (February 6, 2016)
@@ -1544,7 +1544,7 @@ Changelog
 
 ### 3.2.0 (October 19, 2015)
 - Added Google Analytics script.
-- Split *api.js* `require` intro declaration and initialization for better performance. (See <a href="https://github.com/sahat/hackathon-starter/issues/247">#247</a>)
+- Split *ApiController.ts* `require` intro declaration and initialization for better performance. (See <a href="https://github.com/sahat/hackathon-starter/issues/247">#247</a>)
 - Removed [ionicons](http://ionicons.com).
 - Removed [connect-assets](https://github.com/adunkman/connect-assets). (Replaced by [node-sass-middleware](https://github.com/sass/node-sass-middleware))
 - Fixed alignment styling on /login, /profile and /account
@@ -1578,7 +1578,7 @@ Changelog
 - Updated Font Awesome `4.3.0`.
 - Updated Bootstrap `3.3.4`.
 - Removed Ionicons.
-- Removed unused `User` variable in *controllers/api.js*.
+- Removed unused `User` variable in *controllers/ApiController.ts*.
 - Removed Nodejitsu instructions from README.
 
 ### 3.0.1 (February 23, 2015)
@@ -1615,7 +1615,7 @@ Changelog
 
 ### 2.3.4 (October 27, 2014)
 - Font Awesome 4.2.0 [01e7bd5c09926911ca856fe4990e6067d9148694](https://github.com/sahat/hackathon-starter/commit/01e7bd5c09926911ca856fe4990e6067d9148694)
-- Code cleanup in `app.js` and `controllers/api.js`. [8ce48f767c0146062296685cc101acf3d5d224d9](https://github.com/sahat/hackathon-starter/commit/8ce48f767c0146062296685cc101acf3d5d224d9) [cdbb9d1888a96bbba92d4d14deec99a8acba2618](https://github.com/sahat/hackathon-starter/commit/cdbb9d1888a96bbba92d4d14deec99a8acba2618)
+- Code cleanup in `app.js` and `controllers/ApiController.ts`. [8ce48f767c0146062296685cc101acf3d5d224d9](https://github.com/sahat/hackathon-starter/commit/8ce48f767c0146062296685cc101acf3d5d224d9) [cdbb9d1888a96bbba92d4d14deec99a8acba2618](https://github.com/sahat/hackathon-starter/commit/cdbb9d1888a96bbba92d4d14deec99a8acba2618)
 - Updated Stripe API example. [afef373cd57b6a44bf856eb093e8f2801fc2dbe2](https://github.com/sahat/hackathon-starter/commit/afef373cd57b6a44bf856eb093e8f2801fc2dbe2)
 - Added 1-step deployment process with Heroku and mLab add-on. [c5def7b7b3b98462e9a2e7896dc11aaec1a48b3f](https://github.com/sahat/hackathon-starter/commit/c5def7b7b3b98462e9a2e7896dc11aaec1a48b3f)
 - Updated Twitter apps dashboard url. [e378fbbc24e269de69494d326bc20fcb641c0697](https://github.com/sahat/hackathon-starter/commit/e378fbbc24e269de69494d326bc20fcb641c0697)
