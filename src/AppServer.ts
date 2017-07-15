@@ -1,4 +1,5 @@
 import {HomeController} from "./controllers/HomeController"
+import {ContactController} from "./controllers/ContactController"
 
 const express = require('express');
 const compression = require('compression');
@@ -42,7 +43,7 @@ export class AppServer {
     const homeController = new HomeController();
     const userController = require('./controllers/user');
     const apiController = require('./controllers/api');
-    const contactController = require('./controllers/contact');
+    const contactController = new ContactController();
 
     /**
      * API keys and Passport configuration.
