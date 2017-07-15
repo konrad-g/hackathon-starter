@@ -2,6 +2,7 @@ import {HomeController} from "./controllers/HomeController"
 import {ContactController} from "./controllers/ContactController"
 import {UserController} from "./controllers/UserController"
 import {ApiController} from "./controllers/ApiController"
+import {PassportConfig} from "./config/PassportConfig";
 
 const express = require('express');
 const compression = require('compression');
@@ -33,7 +34,7 @@ export class AppServer {
   }
 
   start() {
-    
+
     /**
      * Load environment variables from .env file, where API keys and passwords are configured.
      */
@@ -50,7 +51,7 @@ export class AppServer {
     /**
      * API keys and Passport configuration.
      */
-    const passportConfig = require('./config/passport');
+    const passportConfig = new PassportConfig();
 
     /**
      * Create Express server.

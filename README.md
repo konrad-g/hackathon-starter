@@ -336,7 +336,7 @@ Project Structure
 
 | Name                               | Description                                                  |
 | ---------------------------------- | ------------------------------------------------------------ |
-| **config**/passport.js             | Passport Local and OAuth strategies, plus login middleware.  |
+| **config**/PassportConfig.ts             | Passport Local and OAuth strategies, plus login middleware.  |
 | **controllers**/ApiController.ts             | Controller for /api route and all api examples.              |
 | **controllers**/ContactController.ts         | Controller for contact form.                                 |
 | **controllers**/home.js            | Controller for home page (index).                            |
