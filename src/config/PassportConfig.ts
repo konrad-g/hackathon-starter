@@ -1,3 +1,6 @@
+import {StoreUser} from "./../models/StoreUser"
+const User = StoreUser.getInstance();
+
 const passport = require('passport');
 const request = require('request');
 const InstagramStrategy = require('passport-instagram').Strategy;
@@ -11,7 +14,6 @@ const OpenIDStrategy = require('passport-openid').Strategy;
 const OAuthStrategy = require('passport-oauth').OAuthStrategy;
 const OAuth2Strategy = require('passport-oauth').OAuth2Strategy;
 
-const User = require('../models/User');
 
 export class PassportConfig {
 

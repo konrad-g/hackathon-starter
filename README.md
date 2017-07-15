@@ -341,7 +341,7 @@ Project Structure
 | **controllers**/ContactController.ts         | Controller for contact form.                                 |
 | **controllers**/home.js            | Controller for home page (index).                            |
 | **controllers**/UserController.ts            | Controller for user account management.                      |
-| **models**/User.js                 | Mongoose schema and model for User.                          |
+| **models**/StoreUser.ts                 | Mongoose schema and model for User.                          |
 | **public**/                        | Static assets (fonts, css, js, img).                         |
 | **public**/**js**/application.js   | Specify client-side JavaScript dependencies.                 |
 | **public**/**js**/main.js          | Place your client-side JavaScript here.                      |
