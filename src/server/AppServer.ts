@@ -78,8 +78,8 @@ export class AppServer {
     app.use(expressStatusMonitor());
     app.use(compression());
     app.use(sass({
-      src: path.join(__dirname, 'public'),
-      dest: path.join(__dirname, 'public')
+      src: path.join(__dirname, '..' + path.sep + 'client'),
+      dest: path.join(__dirname, '..' + path.sep + 'client')
     }));
     app.use(logger('dev'));
     app.use(bodyParser.json());
@@ -125,7 +125,7 @@ export class AppServer {
       }
       next();
     });
-    app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }));
+    app.use(express.static(path.join(__dirname, '..' + path.sep + 'client'), { maxAge: 31557600000 }));
     app.use("/bower_components", express.static(path.join(__dirname, '../bower_components'), { maxAge: 31557600000 }));
     /**
      * Primary app routes.

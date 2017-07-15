@@ -9,11 +9,11 @@
   "author": "Sahat Yalkabov",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon --exec .\"/node_modules/.bin/ts-node\" -- .\"/src/boot-dev.ts\"",
-    "start-prod": ".\"/node_modules/.bin/ts-node\" .\"/src/boot-prod.ts\"",
+    "start": "nodemon --exec .\"/node_modules/.bin/ts-node\" -- .\"/src/server/boot-dev.ts\"",
+    "start-prod": ".\"/node_modules/.bin/ts-node\" .\"/src/server/boot-prod.ts\"",
     "test-all": "npm run test-server && npm run test-client",
     "test-client": "karma start karma.conf.js",
-    "test-server": "mocha -r ts-node/register test/server/**/*.ts"
+    "test-server": "mocha -r ts-node/registertest/server/**/*.ts"
   },
   "dependencies": {
     "bcrypt-nodejs": "^0.0.3",
