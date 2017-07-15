@@ -1,5 +1,6 @@
 import {HomeController} from "./controllers/HomeController"
 import {ContactController} from "./controllers/ContactController"
+import {UserController} from "./controllers/UserController"
 
 const express = require('express');
 const compression = require('compression');
@@ -41,7 +42,7 @@ export class AppServer {
      * Controllers (route handlers).
      */
     const homeController = new HomeController();
-    const userController = require('./controllers/user');
+    const userController = new UserController();
     const apiController = require('./controllers/api');
     const contactController = new ContactController();
 
